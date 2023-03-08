@@ -1,1 +1,55 @@
-<p>extrato works!</p>
+<div class="container">
+  <div class="col-12">
+    <h2 class="pb-2 border-bottom">Extrato</h2>
+  </div>
+  <div class="col-12">
+    <form [formGroup]="extratoForm " (ngSubmit)="listarTransacoesPorPeriodo()">
+      <div class="col">
+        <div class="mb-3 ">
+          <label for="agencia" class="form-label">Agência</label>
+          <input type="text" class="form-control" id="nome" formControlName="agencia">
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="numero" class="form-label">Conta</label>
+          <input type="text" class="form-control" id="nome" formControlName="numero">
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="dataInicial" class="form-label">Data Inicial</label>
+          <input type="text" class="form-control" id="nome" formControlName="dataInicial">
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="dataFinal" class="form-label">Data Final</label>
+          <input type="text" class="form-control" id="nome" formControlName="dataFinal">
+        </div>
+      </div>
+      <div class="col mb-12">
+        <button type="submit" [disabled]="!extratoForm.valid" class="btn btn-primary" >
+          Consultar
+         </button>
+      </div>
+  </form>
+  </div>
+</div>
+
+<table class="table table-striped table-dark" *ngIf="!transacoes">
+  <thead>
+    <tr>
+      <th scope="col">Horario</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transacao of transacoes"  >
+      <td>{{ transacao.horario.toString().split("T")[0].split('-').reverse().join('/')}}</td>
+      <td>{{ transacao.descricao }}</td>
+      <td>{{ transacao.valor | currency: 'BRL' }}</td>
+    </tr>
+  </tbody>
+</table>

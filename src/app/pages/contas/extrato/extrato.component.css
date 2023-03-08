@@ -1,0 +1,54 @@
+label.form-label {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+h2{
+  margin-top: -15%;
+  margin-block-end: 20px;
+}
+
+
+.container{
+  width: 550px;
+  height: 550px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+}
+
+button.btn.btn-primary {
+  background-size: 50px;
+  font-size: 28px;
+  margin-top: 10%;
+  border-radius: 8%;
+}
+
+
+h2.pb-2.border-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+
+.col.mb-12 {
+  top: -20%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.col-12 {
+  margin-top: -40%;
+}
+
+table.table.table-striped.table-dark{
+  margin-top: 5%;
+}
