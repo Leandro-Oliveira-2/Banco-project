@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="col-12">
+    <h2 class="pb-2 border-bottom">Deposito</h2>
+  </div>
+  <div class="col-12">
+    <form [formGroup]="depositoForm" (ngSubmit)="depositar()">
+      <div class="col">
+        <div class="mb-3">
+          <label for="agencia" class="form-label">Agência</label>
+          <input type="text" class="form-control" id="nome" formControlName="agencia">
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="numeroConta" class="form-label">Número da Conta</label>
+          <input type="text" class="form-control" id="nome" formControlName="numeroConta">
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="valor" class="form-label">Valor</label>
+          <input type="text" class="form-control" id="nome" formControlName="valor">
+        </div>
+      </div>
+      <div class="col mb-12">
+        <button type="submit" class="btn btn-primary" [disabled]="!depositoForm.valid">
+          Depositar
+         </button>
+      </div>
+
+

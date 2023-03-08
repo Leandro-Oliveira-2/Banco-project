@@ -1,0 +1,38 @@
+button.btn.btn-sm.btn-outline-dark.dropdown-toggle {
+  color: aliceblue;
+}
+h2.pb-2.border-bottom {
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+button.btn.btn-sm.btn-outline-dark.dropdown-toggle {
+  color: aliceblue;
+}
+
+b{
+  font-size: 30px;
+}
+
+h2.pb-2.border-bottom{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 120px;
+  margin-left: 550px;
+}
+.txt-pag{
+  margin-top: -10px;
+  margin-left: 15px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(20px);
+  margin-block-end: 10%;
+}
+
+element.style{
+  color: black;
+
+}

@@ -1,0 +1,6 @@
+div.col{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  size: 10px;
+}

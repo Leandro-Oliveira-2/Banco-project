@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="col-12">
+    <h2 class="pb-2 border-bottom">Cadastro de Cliente</h2>
+  </div>
+<div class="col-12">
+<form [formGroup]="clienteForm" (ngSubmit)="cadastrar()">
+  <div class="row">
+    <div class="col">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" formControlName="nome">
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <label for="cpf" class="form-label">CPF</label>
+        <input type="text" class="form-control" id="cpf" formControlName="cpf">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="mb-3">
+        <label for="email" class="form-label" aria-placeholder="Exemplo usuario@gmail.com">E-mail</label>
+        <input type="email" class="form-control" id="email"  formControlName="email" placeholder="Exemplo usuario@gmail.com">
+        <div id="emailHelp" class="form-text">Exemplo usuario@gmail.com</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <label for="observacoes" class="form-label">Site</label>
+        <textarea class="form-control" rows="3" formControlName="observacoes"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-12">
+  <button type="submit" [disabled]="!clienteForm.valid" class="btn btn-primary">
+    {{idCliente ? 'Editar' : 'Cadastrar' }}
+  </button>
+</div>
+</form>
+</div>
